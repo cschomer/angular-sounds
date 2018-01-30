@@ -18,7 +18,7 @@ import { Key } from '../models/key';
 })
 export class KeyComponent implements OnInit, OnDestroy {
   audio: any;
-  private data: Subject<Key> = new Subject();
+  private data$: Subject<Key> = new Subject();
   private subscription: Subscription;
   private listeners: Function[] = [];
   @Input() key: Key;
@@ -29,7 +29,7 @@ export class KeyComponent implements OnInit, OnDestroy {
   }
 
   constructor(private renderer: Renderer) {
-    this.subscription = this.data
+    this.subscription = this.data$
       .pipe(
         filter(key => key.label.match(/[a-z]/i) != null),
         map((key: Key): HTMLAudioElement => new Audio(key.src)),
@@ -40,7 +40,7 @@ export class KeyComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.data.next(this.key);
+    this.data$.next(this.key);
     // listen only to specified key event
     this.listeners.push(
       this.renderer.listen('document', `keydown.${this.key.label}`, () => {
