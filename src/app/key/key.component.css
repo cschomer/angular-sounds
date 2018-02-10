@@ -4,7 +4,8 @@
   font-size: 1.5rem;
   padding: 1rem 0.5rem;
   transition: all 0.07s ease;
-  width: 10rem;
+  min-width: 75px;
+  width: 75px;
   text-align: center;
   color: white;
   background: rgba(0, 0, 0, 0.4);
