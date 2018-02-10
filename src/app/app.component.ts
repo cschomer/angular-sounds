@@ -8,15 +8,16 @@ import { Key } from './models/key';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  readonly basePath = 'https://firebasestorage.googleapis.com/v0/b/angularsounds-79988.appspot.com/o/';
+  readonly query = '?alt=media&token=bc879236-6668-44f4-b954-3388cc56240a';
   keys: Key[] = [
-    { label: 'A', sound: 'clap', src: 'clap.wav' },
-    { label: 'S', sound: 'hihat', src: 'hihat.wav' },
-    { label: 'D', sound: 'kick', src: 'kick.wav' },
-    { label: 'F', sound: 'openhat', src: 'openhat.wav' },
-    { label: 'G', sound: 'boom', src: 'boom.wav' },
-    { label: 'H', sound: 'snare', src: 'snare.wav' },
-    { label: 'J', sound: 'tom', src: 'tom.wav' },
-    { label: 'K', sound: 'tink', src: 'tink.wav' }
+    { label: 'A', sound: 'clap', src: `${this.basePath}clap.wav${this.query}` },
+    { label: 'S', sound: 'hihat', src: `${this.basePath}hihat.wav${this.query}` },
+    { label: 'D', sound: 'kick', src: `${this.basePath}kick.wav${this.query}` },
+    { label: 'F', sound: 'openhat', src: `${this.basePath}openhat.wav${this.query}` },
+    { label: 'G', sound: 'boom', src: `${this.basePath}boom.wav${this.query}` },
+    { label: 'H', sound: 'snare', src: `${this.basePath}snare.wav${this.query}` },
+    { label: 'J', sound: 'tom', src: `${this.basePath}tom.wav${this.query}` },
+    { label: 'K', sound: 'tink', src: `${this.basePath}tink.wav${this.query}` }
   ];
 }

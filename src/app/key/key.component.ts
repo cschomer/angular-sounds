@@ -29,11 +29,10 @@ export class KeyComponent implements OnInit, OnDestroy {
   }
 
   constructor(private renderer: Renderer) {
-    const basePath = '/angular-sounds/assets/sounds/';
     this.subscription = this.data$
       .pipe(
         filter(key => key.label.match(/[a-z]/i) != null),
-        map((key: Key): HTMLAudioElement => new Audio(basePath + key.src)),
+        map((key: Key): HTMLAudioElement => new Audio(key.src)),
         tap(audio => audio.load()),
         tap(audio => (this.audio = audio))
       )
