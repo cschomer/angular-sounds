@@ -10,13 +10,13 @@ import { Key } from './models/key';
 export class AppComponent {
   title = 'app';
   keys: Key[] = [
-    { label: 'A', sound: 'clap', src: '/assets/sounds/clap.wav' },
-    { label: 'S', sound: 'hihat', src: '/assets/sounds/hihat.wav' },
-    { label: 'D', sound: 'kick', src: '/assets/sounds/kick.wav' },
-    { label: 'F', sound: 'openhat', src: '/assets/sounds/openhat.wav' },
-    { label: 'G', sound: 'boom', src: '/assets/sounds/boom.wav' },
-    { label: 'H', sound: 'snare', src: '/assets/sounds/snare.wav' },
-    { label: 'J', sound: 'tom', src: '/assets/sounds/tom.wav' },
-    { label: 'K', sound: 'tink', src: '/assets/sounds/tink.wav' }
+    { label: 'A', sound: 'clap', src: 'clap.wav' },
+    { label: 'S', sound: 'hihat', src: 'hihat.wav' },
+    { label: 'D', sound: 'kick', src: 'kick.wav' },
+    { label: 'F', sound: 'openhat', src: 'openhat.wav' },
+    { label: 'G', sound: 'boom', src: 'boom.wav' },
+    { label: 'H', sound: 'snare', src: 'snare.wav' },
+    { label: 'J', sound: 'tom', src: 'tom.wav' },
+    { label: 'K', sound: 'tink', src: 'tink.wav' }
   ];
 }
